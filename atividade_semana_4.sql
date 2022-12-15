@@ -38,4 +38,6 @@ SELECT * FROM periferico;
 DELETE FROM periferico WHERE id_periferico=4;
 DELETE FROM hardware WHERE id_hardware=2;
 
-SELECT * FROM periferico JOIN hardware ON id_hardware;
+SELECT a.nome as Hardwares, b.nome as Perifericos 
+from hardware a
+inner join periferico b on a.id_hardware = b.id_periferico;
